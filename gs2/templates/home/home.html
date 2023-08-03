@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<img src="{% static 'image/royal.jpg'%}">
+<img src="{% get_static_prefix %}image/royal.jpg">
+<h>Welcome to the Home page of Sanket Classes</h>
+</body>
+</html>

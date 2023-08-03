@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stdudent Details</title>
+</head>
+<body>
+<h1 align="center">Welcome to student page</h1>
+{% if stu %}
+    <div style="text-align: center;">
+        <table border="2" style="margin: 0 auto;">
+            <tr>
+                <th>ID</th>
+                <th>StuID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+            {% for st in stu %}
+                <tr>
+                    <td>{{ st.id }}</td>
+                    <td>{{ st.stuid }}</td>
+                    <td>{{ st.stuname }}</td>
+                    <td>{{ st.stuemail }}</td>
+                    <td>{{ st.stupass }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% else %}
+    <h2>No data</h2>
+{% endif %}
+</body>
+</html>
+
